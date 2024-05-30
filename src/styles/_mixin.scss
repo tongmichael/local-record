@@ -1,0 +1,32 @@
+$content-width:1200px;
+
+$img-base-url:"~@/static/";
+
+@mixin bgi-contain($name) {
+    background: url($img-base-url+$name) no-repeat center;
+    background-size: contain;
+}
+
+@mixin bgi-full($name) {
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
+    background-image: url($img-base-url+$name);
+}
+
+@mixin bgi-cover($name) {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-image: url($img-base-url+$name);
+}
+
+@mixin bgi-center($name) {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url($img-base-url+$name);
+}
+
+@mixin bgi($name) {
+    background-image: url($img-base-url+$name);
+}
